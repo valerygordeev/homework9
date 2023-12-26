@@ -1,9 +1,7 @@
 # homework9
-```
-Написать сервис, который будет раз в 30 секунд мониторить лог на
-предмет наличия ключевого слова. Файл и слово должны задаваться в
-/etc/sysconfig
 
+### Написать сервис, который будет раз в 30 секунд мониторить лог на предмет наличия ключевого слова. Файл и слово должны задаваться в /etc/sysconfig
+```
 1. Создаем файл конфигурации сервиса
      vi /etc/sysconfig/watchlog
         # Configuration file for my watchlog service
@@ -40,7 +38,7 @@
         Type=oneshot
         EnvironmentFile=/etc/sysconfig/watchlog
         ExecStart=/opt/watchlog.sh $WORD $LOG
-5.  Создаем unit для timer                                  
+6.  Создаем unit для timer                                  
       vi /etc/systemd/system/watchlog.timer
         [Unit]
         Description=Run watchlog script every 30 second
@@ -55,15 +53,14 @@
         WantedBy=multi-user.target
         
         Параметр AccuracySec=1us использован для точного запуска таймера
-6.  Запускаем таймер
+7.  Запускаем таймер
        systemctl start watchlog.timer
-7.  Отображаем вывод записи системного лога
+8.  Отображаем вывод записи системного лога
        tail -f /var/log/messages      
+```
 
-
-Из epel установить spawn-fcgi и переписать init-скрипт на unit-файл. Имя
-сервиса должно также называться.
-
+### Из epel установить spawn-fcgi и переписать init-скрипт на unit-файл. Имя сервиса должно также называться.
+```
 1.  Устанавливаем ПО
       yum install epel-release -y && yum install spawn-fcgi php php-climod_fcgid httpd -y
 2.  Разкомментируем 2 последние строки конфигурационного файла
@@ -94,10 +91,9 @@
 4.  Запускаем и контролируем юнит
       systemctl start spawn-fcgi
       systemctl status spawn-fcgi
-      
- Дополнить юнит-файл apache httpd возможностью запустить несколько
-инстансов сервера с разными конфигами
-
+```      
+### Дополнить юнит-файл apache httpd возможностью запустить несколько инстансов сервера с разными конфигами
+```
 1.  Конфигурируем шаблон для запуска нескольких экземплятор сервиса
       vi /usr/lib/systemd/system/httpd.service
         [Unit]
