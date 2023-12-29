@@ -1,671 +1,0 @@
-Script started on Пн 25 дек 2023 08:05:13
-]0;vagrant@centos7:~[?1034h[vagrant@centos7 ~]$ touch /etc/sysconfig/watchlog
-touch: cannot touch ‘/etc/sysconfig/watchlog’: Permission denied
-]0;vagrant@centos7:~[vagrant@centos7 ~]$ touch /etc/sysconfig/watchlog[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[1@d[1@o[1@ 
-]0;vagrant@centos7:~[vagrant@centos7 ~]$ vi sudo touch /etc/sysconfig/watchlog[C[1@ [1P[1P[1P[1P[1P[1P /etc/sysconfig/watchlogv /etc/sysconfig/watchlogi /etc/sysconfig/watchlog
-[?1049h[?1h=[1;15r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[15;1H"/etc/sysconfig/watchlog" 0L, 0C[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [1;1H[?12l[?25h[?25l[m[15;1H[97m[41mE348: No string under cursor[m[15;29H[K[1;1H[?12l[?25h[?25l[15;1H[1m-- INSERT --[m[15;13H[K[1;1Honfiguration file for my watchlog service
-# Place it to /etc/sysconfig[2;29H[K[3;1H[K[4;1H# File and word in that file that we will be monit[4;51H[K[5;1HWORD="ALERT"[5;13H[K[6;1HLOG=/var/log/watchlog.log[6;26H[K[6;26H[?12l[?25h[5;13H[4;26H[3;1H[2;26H[1;26H[?25l#onfiguration file for my watchlog service#[?12l[?25h[?25l onfiguration file for my watchlog service# [?12l[?25h[?25lConfiguration file for my watchlog service# C[?12l[?25h[15;1H[K[1;3H[?25l[?12l[?25h[?25l[15;1H:[?12l[?25hwq[?25l"/etc/sysconfig/watchlog" 6L, 165C written
-[?1l>[?12l[?25h[?1049l]0;vagrant@centos7:~[vagrant@centos7 ~]$ sudo touch /var?[K/log/watchlog.log
-]0;vagrant@centos7:~[vagrant@centos7 ~]$ sudo touch /var/log/watchlog.log[1P /var/log/watchlog.log[1P /var/log/watchlog.log[1P /var/log/watchlog.log[1P /var/log/watchlog.log[1P /var/log/watchlog.logv /var/log/watchlog.logi /var/log/watchlog.log
-[?1049h[?1h=[1;15r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[15;1H"/var/log/watchlog.log" 0L, 0C[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [1;1H[?12l[?25h[?25l[m[15;1H[1m-- INSERT --[m[15;13H[K[1;1H[?12l[?25h[?25lL[?12l[?25h[?25lE[?12l[?25h[?25l[1;2H[K[1;2H[?12l[?25h[?25l[1;1H[K[1;1H[?12l[?25h[?25lA[?12l[?25h[?25lL[?12l[?25h[?25lE[?12l[?25h[?25lR[?12l[?25h[?25lT[?12l[?25h[15;1H[K[1;5H[?25l[?12l[?25h[?25l[15;1H:[?12l[?25hwq[?25l"/var/log/watchlog.log" 1L, 6C written
-[?1l>[?12l[?25h[?1049l]0;vagrant@centos7:~[vagrant@centos7 ~]$ sudo vi /opt/watchlog.sh
-[?1049h[?1h=[1;15r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[15;1H"/opt/watchlog.sh" [New File][2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [1;1H[?12l[?25h[?25l[m[15;1H[97m[41mE348: No string under cursor[m[15;29H[K[1;1H[?12l[?25h[?25l[15;1H[1m-- INSERT --[m[15;13H[K[1;1H[?12l[?25h[?25l#[?12l[?25h[?25l![?12l[?25h[?25l/[?12l[?25h[?25lb[?12l[?25h[?25li[?12l[?25h[?25ln[?12l[?25h[?25l/[?12l[?25h[?25lb[?12l[?25h[?25la[?12l[?25h[?25ls[?12l[?25h[?25lh[?12l[?25h[?25l[2;1H[K[2;1H[?12l[?25h[?25l[3;1H[K[3;1H[?12l[?25h[?25lW[?12l[?25h[?25lO[?12l[?25h[?25lR[?12l[?25h[?25lD[?12l[?25h[?25l=[?12l[?25h[?25l$[?12l[?25h[?25l1[?12l[?25h[?25l[4;1H[K[4;1H[?12l[?25h[?25lL[?12l[?25h[?25lO[?12l[?25h[?25lG[?12l[?25h[?25l=[?12l[?25h[?25l$[?12l[?25h[?25l2[?12l[?25h[?25l[5;1H[K[5;1H[?12l[?25h[?25lD[?12l[?25h[?25lA[?12l[?25h[?25lT[?12l[?25h[?25lE[?12l[?25h[?25l=[?12l[?25h[?25l$[?12l[?25h[?25l3[?12l[?25h[?25l[5;7H[K[5;7H[?12l[?25h[?25l[5;6H[K[5;6H[?12l[?25h[?25l'[?12l[?25h[?25ld[?12l[?25h[?25la[?12l[?25h[?25lt[?12l[?25h[?25le[?12l[?25h[?25l'[?12l[?25h[?25l[6;1H[K[6;1H[?12l[?25h[?25l[7;1H[K[7;1H[?12l[?25h[?25li[?12l[?25h[?25lf[?12l[?25h[?25l [?12l[?25h[?25lg[?12l[?25h[?25lr[?12l[?25h[?25le[?12l[?25h[?25lp[?12l[?25h[?25l [?12l[?25h[?25l$[?12l[?25h[?25lW[?12l[?25h[?25lO[?12l[?25h[?25lR[?12l[?25h[?25lD[?12l[?25h[?25l [?12l[?25h[?25l$[?12l[?25h[?25lL[?12l[?25h[?25lO[?12l[?25h[?25lG[?12l[?25h[?25l [?12l[?25h[?25l&[?12l[?25h[?25l.[?12l[?25h[?25l [?12l[?25h[?25l/[?12l[?25h[?25ld[?12l[?25h[?25le[?12l[?25h[?25lv[?12l[?25h[?25l/[?12l[?25h[?25ln[?12l[?25h[?25lu[?12l[?25h[?25ll[?12l[?25h[?25ll[?12l[?25h[?25l[8;1H[K[8;1H[?12l[?25h[?25lt[?12l[?25h[?25lh[?12l[?25h[?25le[?12l[?25h[?25ln[?12l[?25h[?25l[9;1H[K[9;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l[?12l[?25h[?25l[94m~                                                                               [8;5H[?12l[?25h[?25l[m[9;1H[K[9;1H[?12l[?25h[?25l[8C[?12l[?25h[?25l[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25ll[?12l[?25h[?25lo[?12l[?25h[?25lg[?12l[?25h[?25lg[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25l [?12l[?25h[?25l"[?12l[?25h[?25l$[?12l[?25h[?25lD[?12l[?25h[?25lA[?12l[?25h[?25lT[?12l[?25h[?25lE[?12l[?25h[?25l:[?12l[?25h[?25l [?12l[?25h[?25lI[?12l[?25h[?25l [?12l[?25h[?25lf[?12l[?25h[?25lo[?12l[?25h[?25lu[?12l[?25h[?25ln[?12l[?25h[?25ld[?12l[?25h[?25l [?12l[?25h[?25lw[?12l[?25h[?25lo[?12l[?25h[?25lr[?12l[?25h[?25ld[?12l[?25h[?25l,[?12l[?25h[?25l [?12l[?25h[?25lM[?12l[?25h[?25la[?12l[?25h[?25ls[?12l[?25h[?25lt[?12l[?25h[?25le[?12l[?25h[?25lr[?12l[?25h[?25l![?12l[?25h[?25l"[?12l[?25h[?25l[10;1H[K[10;1H[?12l[?25h[?25le[?12l[?25h[?25ll[?12l[?25h[?25ls[?12l[?25h[?25le[?12l[?25h[?25l[11;1H[K[11;1H[?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25l [?12l[?25h[?25le[?12l[?25h[?25lx[?12l[?25h[?25li[?12l[?25h[?25lt[?12l[?25h[?25l [?12l[?25h[?25l0[?12l[?25h[?25l[12;1H[K[12;1H[?12l[?25h[?25lf[?12l[?25h[?25li[?12l[?25h[15;1H[K[12;2H[?25l[?12l[?25h[?25l
-
-
-:[?12l[?25hwq[?25l"/opt/watchlog.sh" [New] 12L, 137C written
-[?1l>[?12l[?25h[?1049l]0;vagrant@centos7:~[vagrant@centos7 ~]$ chmod +x /opt/watchlog.sh
-chmod: changing permissions of ‘/opt/watchlog.sh’: Operation not permitted
-]0;vagrant@centos7:~[vagrant@centos7 ~]$ chmod +x /opt/watchlog.sh[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@s[1@u[1@d[1@o[1@ 
-]0;vagrant@centos7:~[vagrant@centos7 ~]$ sudo su
-]0;root@centos7:/home/vagrant[?1034h[root@centos7 vagrant]# vi /etc/systemd/system/watchlog.service
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;15r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[15;1H"/etc/systemd/system/watchlog.service" [New File][>c[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [m[15;63H0,0-1[9CAll[1;1H[?12l[?25h[27m[m[H[2J[?25l[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [m[15;63H0,0-1[9CAll"/etc/systemd/system/watchlog.service" [New File][1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[15;1H[1m-- INSERT --[m[15;13H[K[15;63H0,1[11CAll[1;1H[?12l[?25h[?25l[Unit]
-Description=My watchlog service[2;32H[K[3;1H[K[4;1H[Service][4;10H[K[5;1HType=oneshot[5;13H[K[6;1HEnvironmentFile=/etc/sysconfig/watchlog[6;40H[K[7;1HExecStart=/opt/watchlog.sh $WORD $LOG[7;38H[K[15;63H7,38[7;38H[?12l[?25h[15;1H[K[7;37H[?25l[15;63H7,37[10CAll[7;37H[?12l[?25h[?25l[15;63H[K[15;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"/etc/systemd/system/watchlog.service" [New] 7L, 141C written
-[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# vi /etc/systemd/system/watchlog.service[K[K[K[K[K[K[Ktimer
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;15r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[15;1H"/etc/systemd/system/watchlog.timer" [New File][>c[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [m[15;63H0,0-1[9CAll[1;1H[?12l[?25h[27m[m[H[2J[?25l[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [m[15;63H0,0-1[9CAll"/etc/systemd/system/watchlog.timer" [New File][1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[15;1H[1m-- INSERT --[m[15;13H[K[15;63H0,1[11CAll[1;1H[?12l[?25h[?25l[Unit]
-Description=Run watchlog script every 30 second[2;48H[K[3;1H[K[4;1H[Timer][4;8H[K[5;1H# Run every 30 second[5;22H[K[6;1HOnUnitActiveSec=30[6;19H[K[7;1HUnit=watchlog.service[7;22H[K[8;1H[K[9;1H[Install][9;10H[K[10;1HWantedBy=multi-user.target[10;27H[K[15;63H10,27[10;27H[?12l[?25h[15;1H[K[10;26H[?25l[15;63H10,26[9CAll[10;26H[?12l[?25h[?25l[15;63H[K[15;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"/etc/systemd/system/watchlog.timer" [New] 10L, 165C written
-[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl start watchlog.timer
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# tail -f /var/log/messages
-Dec 25 08:46:19 centos7 chronyd[677]: Selected source 162.159.200.123
-Dec 25 08:50:01 centos7 systemd: Started Session 11 of user root.
-Dec 25 08:54:01 centos7 systemd: Removed slice User Slice of root.
-Dec 25 09:00:01 centos7 systemd: Created slice User Slice of root.
-Dec 25 09:00:01 centos7 systemd: Started Session 12 of user root.
-Dec 25 09:00:02 centos7 systemd: Removed slice User Slice of root.
-Dec 25 09:01:01 centos7 systemd: Created slice User Slice of root.
-Dec 25 09:01:01 centos7 systemd: Started Session 13 of user root.
-Dec 25 09:01:01 centos7 systemd: Removed slice User Slice of root.
-Dec 25 09:03:33 centos7 systemd: Started Run watchlog script every 30 second.
-^C
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# [K[root@centos7 vagrant]# [K[root@centos7 vagrant]# [K[root@centos7 vagrant]# [K[root@centos7 vagrant]# [K[root@centos7 vagrant]# [K[root@centos7 vagrant]# [K[root@centos7 vagrant]# [K[root@centos7 vagrant]# systemctl status watchlog
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead)
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog[1P watchlog[1P watchlog[1P watchlog[1P watchlog[1P watchlog[1P watchloge watchlogn watchloge watchlogb watchlogl watchloge watchlog[1P watchlog[1P watchlog[1P watchlog[1P watchlog[1P watchlog[1P watchloge watchlogn watchloga watchlogb watchlogl watchloge watchlog
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl enable watchlogstatus[C[C[C[C[C[C[C[C[C
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead)
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog[1P watchlog[1P watchlog[1P watchlog[1P watchloga watchlogr watchlogt watchlog
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl start watchlog[1@tus[C[C[C[C[C[C[C[C[C
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:08:03 UTC; 2s ago
-  Process: 25995 ExecStart=/opt/watchlog.sh $WORD $LOG (code=exited, status=0/SUCCESS)
- Main PID: 25995 (code=exited, status=0/SUCCESS)
-
-дек 25 09:08:03 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:08:03 centos7.localdomain watchlog.sh[25995]: ALERT
-дек 25 09:08:03 centos7.localdomain systemd[1]: Started My watchlog service.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog[1Prt[C[C[C[C[C[C[C[C[C[1@tus[C[C[C[C[C[C[C[C[Cenable[C[C[C[C[C[C[C[C[Cstatus[C[C[C[C[C[C[C[C[Ctail -f /var/log/messagessystemctl start watchlog.timer[1P watchlog.timer[1P watchlog.timer[1P watchlog.timera watchlog.timert watchlog.timeru watchlog.timers watchlog.timer
-[1;32m●[0m watchlog.timer - Run watchlog script every 30 second
-   Loaded: loaded (/etc/systemd/system/watchlog.timer; disabled; vendor preset: disabled)
-   Active: [1;32mactive (waiting)[0m since Пн 2023-12-25 09:03:33 UTC; 5min ago
-
-дек 25 09:03:33 centos7.localdomain systemd[1]: Started Run watchlog scrip...
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.timer[K[1Prt[C[C[C[C[C[C[C[C[C[1@tus[C[C[C[C[C[C[C[C[Cenable[C[C[C[C[C[C[C[C[Cstatus[C[C[C[C[C[C[C[C[Ctail -f /var/log/messages
-Dec 25 09:03:33 centos7 systemd: Started Run watchlog script every 30 second.
-Dec 25 09:07:52 centos7 systemd: Reloading.
-Dec 25 09:08:03 centos7 systemd: Starting My watchlog service...
-Dec 25 09:08:03 centos7 watchlog.sh: ALERT
-Dec 25 09:08:03 centos7 root: date: I found word, Master!
-Dec 25 09:08:03 centos7 systemd: Started My watchlog service.
-Dec 25 09:08:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:08:40 centos7 watchlog.sh: ALERT
-Dec 25 09:08:40 centos7 root: date: I found word, Master!
-Dec 25 09:08:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:09:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:09:40 centos7 watchlog.sh: ALERT
-Dec 25 09:09:40 centos7 root: date: I found word, Master!
-Dec 25 09:09:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:10:01 centos7 systemd: Created slice User Slice of root.
-Dec 25 09:10:01 centos7 systemd: Started Session 14 of user root.
-Dec 25 09:10:01 centos7 systemd: Removed slice User Slice of root.
-Dec 25 09:10:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:10:40 centos7 root: date: I found word, Master!
-Dec 25 09:10:40 centos7 watchlog.sh: ALERT
-Dec 25 09:10:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:11:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:11:40 centos7 watchlog.sh: ALERT
-Dec 25 09:11:40 centos7 root: date: I found word, Master!
-Dec 25 09:11:40 centos7 systemd: Started My watchlog service.
-^C
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl -e watchlog
-systemctl: invalid option -- 'e'
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl -e watchlogd watchlogi watchlogt watchlog
-systemctl: invalid option -- 'e'
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl -edit watchlog[1P
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H</system/watchlog.service.d/.#override.conf420522df3c439318"<m/watchlog.service.d/.#override.conf420522df3c439318" 0L, 0C[>c[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H0,0-1[9CAll[1;1H[?12l[?25h[27m[m[H[2J[?25l[2;1H[94m~                                                                               [3;1H~                                                                               [4;1H~                                                                               [5;1H~                                                                               [6;1H~                                                                               [7;1H~                                                                               [8;1H~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H0,0-1[9CAll<m/watchlog.service.d/.#override.conf420522df3c439318" 0L, 0C[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[23;1H[K[23;1H:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[23;1H[K[23;1H[?1l>[?12l[?25h[?1049lEditing "/etc/systemd/system/watchlog.service.d/override.conf" canceled: temporary file is empty
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl edit watchlog-watchlog-watchlogfwatchloguwatchloglwatchloglwatchlog watchlog
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"/etc/systemd/system/.#watchlog.service4e820bc585e88490"</systemd/system/.#watchlog.service4e820bc585e88490" 7L, 141C[>c[1;1H[106m[[mUnit[106m][m
-Description=My watchlog service
-
-[Service]
-Type=oneshot
-EnvironmentFile=/etc/sysconfig/watchlog
-ExecStart=/opt/watchlog.sh $WORD $LOG
-[94m~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H1,1[11CAll[1;1H[?12l[?25h[27m[m[H[2J[?25l[1;1H[46m[[mUnit[46m][m
-Description=My watchlog service
-
-[Service]
-Type=oneshot
-EnvironmentFile=/etc/sysconfig/watchlog
-ExecStart=/opt/watchlog.sh $WORD $LOG
-[94m~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H1,1[11CAll</systemd/system/.#watchlog.service4e820bc585e88490" 7L, 141C[1;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[23;1H[K[23;1H:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[23;1H[K[23;1H[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl edit --full watchlog.timer
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"/etc/systemd/system/.#watchlog.timer0abd8af6821600ca"<c/systemd/system/.#watchlog.timer0abd8af6821600ca" 10L, 165C[>c[27m[m[H[2J[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[96m# Run every 30 second[m
-OnUnitActiveSec=30
-Unit=watchlog.service
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H1,1[11CAll<c/systemd/system/.#watchlog.timer0abd8af6821600ca" 10L, 165C    [11C   [1;1H[46m[[mUnit[46m][?12l[?25hP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?25l[m[23;1H[K[23;1H:[?12l[?25hw[?25l[?12l[?25h[?25l[23;2H[K[23;2H[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[23;1H[K[23;1H[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# sustemctl deamon-reload
-bash: sustemctl: command not found
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# sustemctl deamon-reload[1Pmon-reload[1Pmon-reloadamon-reloademon-reload
-bash: sustemctl: command not found
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# sustemctl daemon-reload[1P[1@y
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# tail -f /var/log/messages
-Dec 25 09:14:39 centos7 systemd: Starting My watchlog service...
-Dec 25 09:14:39 centos7 systemd: Reloading.
-Dec 25 09:14:39 centos7 watchlog.sh: ALERT
-Dec 25 09:14:39 centos7 root: date: I found word, Master!
-Dec 25 09:14:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:15:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:15:40 centos7 watchlog.sh: ALERT
-Dec 25 09:15:40 centos7 root: date: I found word, Master!
-Dec 25 09:15:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:15:42 centos7 systemd: Reloading.
-Dec 25 09:16:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:16:40 centos7 watchlog.sh: ALERT
-Dec 25 09:16:40 centos7 root: date: I found word, Master!
-Dec 25 09:16:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:17:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:17:40 centos7 watchlog.sh: ALERT
-Dec 25 09:17:40 centos7 root: date: I found word, Master!
-Dec 25 09:17:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:18:30 centos7 systemd: Starting My watchlog service...
-Dec 25 09:18:30 centos7 watchlog.sh: ALERT
-Dec 25 09:18:30 centos7 root: date: I found word, Master!
-Dec 25 09:18:30 centos7 systemd: Started My watchlog service.
-Dec 25 09:19:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:19:40 centos7 watchlog.sh: ALERT
-Dec 25 09:19:40 centos7 root: date: I found word, Master!
-Dec 25 09:19:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:20:01 centos7 systemd: Created slice User Slice of root.
-Dec 25 09:20:01 centos7 systemd: Started Session 15 of user root.
-Dec 25 09:20:01 centos7 systemd: Removed slice User Slice of root.
-Dec 25 09:20:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:20:40 centos7 watchlog.sh: ALERT
-Dec 25 09:20:40 centos7 root: date: I found word, Master!
-Dec 25 09:20:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:21:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:21:40 centos7 root: date: I found word, Master!
-Dec 25 09:21:40 centos7 watchlog.sh: ALERT
-Dec 25 09:21:40 centos7 systemd: Started My watchlog service.
-^C
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# ыныеуьсед[K[K[K[K[K[K[K[K[Ksystemctl status *timer
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status *timer[1Ptimermtimer[1Ptimerwtimeratimer[Ctimerctimerhtimer.timer
-Unit watch.timer could not be found.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watch.timerl.timero.timerg.timer
-[1;32m●[0m watchlog.timer - Run watchlog script every 30 second
-   Loaded: loaded (/etc/systemd/system/watchlog.timer; disabled; vendor preset: disabled)
-   Active: [1;32mactive (running)[0m since Пн 2023-12-25 09:03:33 UTC; 21min ago
-
-дек 25 09:03:33 centos7.localdomain systemd[1]: Started Run watchlog scrip...
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.timer[3P.timer[5P*timertail -f /var/log/messages[2Psystemctl daemon-reloadu[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ceamon-reloadystemctl edit --full watchlog.timer[K[7Pwatchlog[1@-[C[C[C[C[C[C[C[C[C[C[C[C[C[3P watchlogtail -f /var/log/messagessystemctl status watchlog.timer[K[1Prt[C[C[C[C[C[C[C[C[C[1@tus[C[C[C[C[C[C[C[C[Cenable[C[C[C[C[C[C[C[C[Cstatus[C[C[C[C[C[C[C[C[Ctail -f /var/log/messagessystemctl start watchlog.timer[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi /etc/systemd/system/watchlog.timerservice
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"/etc/systemd/system/watchlog.service" 7L, 141C[>c[1;1H[Unit]
-Description=My watchlog service
-
-[Service]
-Type=oneshot
-EnvironmentFile=/etc/sysconfig/watchlog
-ExecStart=/opt/watchlog.sh $WORD $LOG
-[94m~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H7,1[11CAll[7;1H[?12l[?25h[27m[m[H[2J[?25l[1;1H[Unit]
-Description=My watchlog service
-
-[Service]
-Type=oneshot
-EnvironmentFile=/etc/sysconfig/watchlog
-ExecStart=/opt/watchlog.sh $WORD $LOG
-[94m~                                                                               [9;1H~                                                                               [10;1H~                                                                               [11;1H~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H7,1[11CAll"/etc/systemd/system/watchlog.service" 7L, 141C[7;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[23;63H6[6;1H[?12l[?25h[?25l[23;63H5[5;1H[?12l[?25h[?25l[4;1H[46m[[7C][m[23;63H4[4;1H[?12l[?25h[?25l[[7C][23;63H3,0-1[3;1H[?12l[?25h[?25l
-[46m[[7C][m[23;63H4,1  [4;1H[?12l[?25h[?25l[23;1H[1m-- INSERT --[m[23;13H[K[23;63H4,1[11CAll[4;1H[?12l[?25h[?25l[[7C][23;63H3[3;1H[?12l[?25h[?25lW[23;65H2[3;2H[?12l[?25h[?25la[23;65H3[3;3H[?12l[?25h[?25lt[23;65H4[3;4H[?12l[?25h[?25ls[23;65H5[3;5H[?12l[?25h[?25l[3;4H[K[23;65H4[3;4H[?12l[?25h[?25l[3;3H[K[23;65H3[3;3H[?12l[?25h[?25ln[23;65H4[3;4H[?12l[?25h[?25lt[23;65H5[3;5H[?12l[?25h[?25ls[23;65H6[3;6H[?12l[?25h[?25l=[23;65H7[3;7H[?12l[?25h[?25lw[23;65H8[3;8H[?12l[?25h[?25la[23;65H9[3;9H[?12l[?25h[?25lt[23;65H10[3;10H[?12l[?25h[?25lc[23;66H1[3;11H[?12l[?25h[?25lh[23;66H2[3;12H[?12l[?25h[?25ll[23;66H3[3;13H[?12l[?25h[?25lo[23;66H4[3;14H[?12l[?25h[?25lg[23;66H5[3;15H[?12l[?25h[?25l.[23;66H6[3;16H[?12l[?25h[?25lt[23;66H7[3;17H[?12l[?25h[?25li[23;66H8[3;18H[?12l[?25h[?25lm[23;66H9[3;19H[?12l[?25h[?25le[23;65H20[3;20H[?12l[?25h[?25lr[23;66H1[3;21H[?12l[?25h[?25l[4;22r[4;1H[L[1;23r[23;63H[K[23;63H4,1[11CAll[4;1H[?12l[?25h[23;1H[K[4;1H[?25l[23;63H4,0-1[9CAll[4;1H[?12l[?25h[?25l[23;63H[K[23;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"/etc/systemd/system/watchlog.service" 8L, 162C written
-[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl reload watchlog.service
-Failed to reload watchlog.service: Job type reload is not applicable for unit watchlog.service.
-See system logs and 'systemctl status watchlog.service' for details.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl reload watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.services watchlog.servicet watchlog.servicea watchlog.services watchlog.serviceu watchlog.services watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.servicet watchlog.serviceu watchlog.services watchlog.service
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:27:40 UTC; 23s ago
-  Process: 26292 ExecStart=/opt/watchlog.sh $WORD $LOG (code=exited, status=0/SUCCESS)
- Main PID: 26292 (code=exited, status=0/SUCCESS)
-
-дек 25 09:27:40 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:27:40 centos7.localdomain watchlog.sh[26292]: ALERT
-дек 25 09:27:40 centos7.localdomain systemd[1]: Started My watchlog service.
-[1;31mWarning:[0m watchlog.service changed on disk. Run 'systemctl daemon-reload' to reload units.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl daemon-reload
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl daemon-reloadstatus watchlog.service
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:28:24 UTC; 2s ago
- Main PID: 26309 (code=exited, status=0/SUCCESS)
-
-дек 25 09:28:24 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:28:24 centos7.localdomain watchlog.sh[26309]: ALERT
-дек 25 09:28:24 centos7.localdomain systemd[1]: Started My watchlog service.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.servicea watchlog.servicer watchlog.servicet watchlog.service
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl start watchlog.service[1@tus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:28:36 UTC; 2s ago
-  Process: 26337 ExecStart=/opt/watchlog.sh $WORD $LOG (code=exited, status=0/SUCCESS)
- Main PID: 26337 (code=exited, status=0/SUCCESS)
-
-дек 25 09:28:36 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:28:36 centos7.localdomain watchlog.sh[26337]: ALERT
-дек 25 09:28:36 centos7.localdomain systemd[1]: Started My watchlog service.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# journalctl -s[K[Kwatchlog.servo[Kice
-Failed to add match 'watchlog.service': Invalid argument
-Failed to add filters: Invalid argument
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# journalctl watchlog.service-watchlog.serviceywatchlog.service[1Pwatchlog.serviceuwatchlog.service watchlog.service
-[?1h=-- Logs begin at Пн 2023-12-25 07:58:27 UTC, end at Пн 2023-12-25 09:30:01 UTC. [m
-дек 25 09:08:03 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:08:03 centos7.localdomain watchlog.sh[25995]: ALERT[m
-дек 25 09:08:03 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:08:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:08:40 centos7.localdomain watchlog.sh[26003]: ALERT[m
-дек 25 09:08:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:09:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:09:40 centos7.localdomain watchlog.sh[26016]: ALERT[m
-дек 25 09:09:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:10:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:10:40 centos7.localdomain watchlog.sh[26034]: ALERT[m
-дек 25 09:10:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:11:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:11:40 centos7.localdomain watchlog.sh[26043]: ALERT[m
-дек 25 09:11:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:12:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:12:40 centos7.localdomain watchlog.sh[26052]: ALERT[m
-дек 25 09:12:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:13:32 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:13:32 centos7.localdomain watchlog.sh[26063]: ALERT[m
-дек 25 09:13:32 centos7.localdomain systemd[1]: Started My watchlog service.[m
-[7mlines 1-22[27m[K[Kдек 25 09:14:06 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:14:06 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:14:06 centos7.localdomain watchlog.sh[26106]: ALERT[m
-дек 25 09:14:39 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:14:39 centos7.localdomain watchlog.sh[26118]: ALERT[m
-дек 25 09:14:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:15:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:15:40 centos7.localdomain watchlog.sh[26144]: ALERT[m
-дек 25 09:15:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:16:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:16:40 centos7.localdomain watchlog.sh[26173]: ALERT[m
-дек 25 09:16:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:17:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:17:40 centos7.localdomain watchlog.sh[26183]: ALERT[m
-дек 25 09:17:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:18:30 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:18:30 centos7.localdomain watchlog.sh[26190]: ALERT[m
-дек 25 09:18:30 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:19:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:19:40 centos7.localdomain watchlog.sh[26202]: ALERT[m
-дек 25 09:19:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:20:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-[7mlines 23-44[27m[K[Kдек 25 09:20:40 centos7.localdomain watchlog.sh[26221]: ALERT[m
-дек 25 09:20:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:21:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:21:40 centos7.localdomain watchlog.sh[26231]: ALERT[m
-дек 25 09:21:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:22:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:22:40 centos7.localdomain watchlog.sh[26240]: ALERT[m
-дек 25 09:22:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:23:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:23:40 centos7.localdomain watchlog.sh[26250]: ALERT[m
-дек 25 09:23:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:24:36 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:24:36 centos7.localdomain watchlog.sh[26261]: ALERT[m
-дек 25 09:24:36 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:25:29 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:25:29 centos7.localdomain watchlog.sh[26270]: ALERT[m
-дек 25 09:25:29 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:26:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:26:40 centos7.localdomain watchlog.sh[26282]: ALERT[m
-дек 25 09:26:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:27:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:27:40 centos7.localdomain watchlog.sh[26292]: ALERT[m
-[7mlines 45-66[27m[K[Kдек 25 09:27:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:28:24 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:28:24 centos7.localdomain watchlog.sh[26309]: ALERT[m
-дек 25 09:28:24 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:28:36 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:28:36 centos7.localdomain watchlog.sh[26337]: ALERT[m
-дек 25 09:28:36 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:29:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:29:40 centos7.localdomain watchlog.sh[26347]: ALERT[m
-дек 25 09:29:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-[7mlines 55-76/76 (END)[27m[K[K[K[7mlines 55-76/76 (END)[27m[K[K[?1l>
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# vi /etc/systemd/system/watchlog.timr[Ker
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"/etc/systemd/system/watchlog.timer" 10L, 165C[>c[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[34m# Run every 30 second[m
-OnUnitActiveSec=30
-Unit=watchlog.service
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H10,1[10CAll[10;1H[?12l[?25h[27m[m[H[2J[?25l[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[96m# Run every 30 second[m
-OnUnitActiveSec=30
-Unit=watchlog.service
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                               [12;1H~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H10,1[10CAll"/etc/systemd/system/watchlog.timer" 10L, 165C[10;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[9;1H[46m[[7C][m[23;63H9,1 [9;1H[?12l[?25h[?25l[[7C][23;63H8,0-1[8;1H[?12l[?25h[?25l[23;63H7,1  [7;1H[?12l[?25h[?25l[23;63H6[6;1H[?12l[?25h[?25l[23;65H2[6;2H[?12l[?25h[?25l[23;65H1[6;1H[?12l[?25h[?25l[23;63H7[7;1H[?12l[?25h[?25l[23;65H21[7;21H[?12l[?25h[?25l[23;1H[1m-- INSERT --[m[23;13H[K[23;63H7,21[10CAll[7;21H[?12l[?25h[?25l[23;66H2[7;22H[?12l[?25h[?25l[8;22r[8;1H[L[1;23r[23;63H[K[23;63H8,1[11CAll[8;1H[?12l[?25h[?25lA[23;65H2[8;2H[?12l[?25h[?25lc[23;65H3[8;3H[?12l[?25h[?25lc[23;65H4[8;4H[?12l[?25h[?25lu[23;65H5[8;5H[?12l[?25h[?25lr[23;65H6[8;6H[?12l[?25h[?25la[23;65H7[8;7H[?12l[?25h[?25lc[23;65H8[8;8H[?12l[?25h[?25ly[23;65H9[8;9H[?12l[?25h[?25lS[23;65H10[8;10H[?12l[?25h[?25le[23;66H1[8;11H[?12l[?25h[?25lc[23;66H2[8;12H[?12l[?25h[?25l=[23;66H3[8;13H[?12l[?25h[?25l1[23;66H4[8;14H[?12l[?25h[?25lu[23;66H5[8;15H[?12l[?25h[?25ls[23;66H6[8;16H[?12l[?25h[23;1H[K[8;15H[?25l[23;63H8,15[10CAll[8;15H[?12l[?25h[?25l[23;63H[K[23;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"/etc/systemd/system/watchlog.timer" 11L, 181C written
-[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# vi /etc/systemd/system/watchlog.timer[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7Pjournalctl -u watchlog.service
-[?1h=-- Logs begin at Пн 2023-12-25 07:58:27 UTC, end at Пн 2023-12-25 09:33:40 UTC. [m
-дек 25 09:08:03 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:08:03 centos7.localdomain watchlog.sh[25995]: ALERT[m
-дек 25 09:08:03 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:08:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:08:40 centos7.localdomain watchlog.sh[26003]: ALERT[m
-дек 25 09:08:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:09:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:09:40 centos7.localdomain watchlog.sh[26016]: ALERT[m
-дек 25 09:09:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:10:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:10:40 centos7.localdomain watchlog.sh[26034]: ALERT[m
-дек 25 09:10:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:11:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:11:40 centos7.localdomain watchlog.sh[26043]: ALERT[m
-дек 25 09:11:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:12:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:12:40 centos7.localdomain watchlog.sh[26052]: ALERT[m
-дек 25 09:12:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:13:32 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:13:32 centos7.localdomain watchlog.sh[26063]: ALERT[m
-дек 25 09:13:32 centos7.localdomain systemd[1]: Started My watchlog service.[m
-[7mlines 1-22[27m[K[Kдек 25 09:14:06 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:14:06 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:14:06 centos7.localdomain watchlog.sh[26106]: ALERT[m
-дек 25 09:14:39 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:14:39 centos7.localdomain watchlog.sh[26118]: ALERT[m
-дек 25 09:14:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:15:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:15:40 centos7.localdomain watchlog.sh[26144]: ALERT[m
-дек 25 09:15:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:16:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:16:40 centos7.localdomain watchlog.sh[26173]: ALERT[m
-дек 25 09:16:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:17:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:17:40 centos7.localdomain watchlog.sh[26183]: ALERT[m
-дек 25 09:17:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:18:30 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:18:30 centos7.localdomain watchlog.sh[26190]: ALERT[m
-дек 25 09:18:30 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:19:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:19:40 centos7.localdomain watchlog.sh[26202]: ALERT[m
-дек 25 09:19:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:20:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-[7mlines 23-44[27m[K[Kдек 25 09:20:40 centos7.localdomain watchlog.sh[26221]: ALERT[m
-дек 25 09:20:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:21:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:21:40 centos7.localdomain watchlog.sh[26231]: ALERT[m
-дек 25 09:21:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:22:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:22:40 centos7.localdomain watchlog.sh[26240]: ALERT[m
-дек 25 09:22:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:23:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:23:40 centos7.localdomain watchlog.sh[26250]: ALERT[m
-дек 25 09:23:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:24:36 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:24:36 centos7.localdomain watchlog.sh[26261]: ALERT[m
-дек 25 09:24:36 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:25:29 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:25:29 centos7.localdomain watchlog.sh[26270]: ALERT[m
-дек 25 09:25:29 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:26:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:26:40 centos7.localdomain watchlog.sh[26282]: ALERT[m
-дек 25 09:26:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:27:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:27:40 centos7.localdomain watchlog.sh[26292]: ALERT[m
-[7mlines 45-66[27m[K[Kдек 25 09:27:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:28:24 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:28:24 centos7.localdomain watchlog.sh[26309]: ALERT[m
-дек 25 09:28:24 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:28:36 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:28:36 centos7.localdomain watchlog.sh[26337]: ALERT[m
-дек 25 09:28:36 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:29:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:29:40 centos7.localdomain watchlog.sh[26347]: ALERT[m
-дек 25 09:29:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:30:20 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:30:20 centos7.localdomain watchlog.sh[26365]: ALERT[m
-дек 25 09:30:20 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:31:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:31:40 centos7.localdomain watchlog.sh[26375]: ALERT[m
-дек 25 09:31:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:32:28 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:32:29 centos7.localdomain watchlog.sh[26380]: ALERT[m
-дек 25 09:32:29 centos7.localdomain systemd[1]: Started My watchlog service.[m
-дек 25 09:33:40 centos7.localdomain systemd[1]: Starting My watchlog service...[m
-дек 25 09:33:40 centos7.localdomain watchlog.sh[26390]: ALERT[m
-дек 25 09:33:40 centos7.localdomain systemd[1]: Started My watchlog service.[m
-[7mlines 67-88[27m[K[K[K[7mlines 67-88/88 (END)[27m[K[K[K[7mlines 67-88/88 (END)[27m[K[K[K[7mlines 67-88/88 (END)[27m[K[K[?1l>
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# tail -f /var/log/messages
-Dec 25 09:32:29 centos7 root: date: I found word, Master!
-Dec 25 09:32:29 centos7 systemd: Started My watchlog service.
-Dec 25 09:33:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:33:40 centos7 watchlog.sh: ALERT
-Dec 25 09:33:40 centos7 root: date: I found word, Master!
-Dec 25 09:33:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:34:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:34:40 centos7 root: date: I found word, Master!
-Dec 25 09:34:40 centos7 watchlog.sh: ALERT
-Dec 25 09:34:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:35:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:35:40 centos7 watchlog.sh: ALERT
-Dec 25 09:35:40 centos7 root: date: I found word, Master!
-Dec 25 09:35:40 centos7 systemd: Started My watchlog service.
-Dec 25 09:36:40 centos7 systemd: Starting My watchlog service...
-Dec 25 09:36:40 centos7 root: date: I found word, Master!
-Dec 25 09:36:40 centos7 watchlog.sh: ALERT
-Dec 25 09:36:40 centos7 systemd: Started My watchlog service.
-^C
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# tail -f /var/log/messagesjournalctl -u watchlog.service[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi /etc/systemd/system/watchlog.timer
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"/etc/systemd/system/watchlog.timer" 11L, 181C[>c[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[34m# Run every 30 second[m
-OnUnitActiveSec=30
-Unit=watchlog.service
-AccuracySec=1us
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H8,1[11CAll[8;1H[?12l[?25h[27m[m[H[2J[?25l[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[96m# Run every 30 second[m
-OnUnitActiveSec=30
-Unit=watchlog.service
-AccuracySec=1us
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H8,1[11CAll"/etc/systemd/system/watchlog.timer" 11L, 181C[8;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[23;63H7[7;1H[?12l[?25h[?25l[23;63H6[6;1H[?12l[?25h[?25l[23;65H2[6;2H[?12l[?25h[?25l[23;65H3[6;3H[?12l[?25h[?25l[23;65H4[6;4H[?12l[?25h[?25l[23;65H5[6;5H[?12l[?25h[?25l[23;65H6[6;6H[?12l[?25h[?25l[23;65H7[6;7H[?12l[?25h[?25l[23;65H8[6;8H[?12l[?25h[?25l[23;65H9[6;9H[?12l[?25h[?25l[23;65H10[6;10H[?12l[?25h[?25l[23;66H1[6;11H[?12l[?25h[?25l[23;66H2[6;12H[?12l[?25h[?25l[23;66H3[6;13H[?12l[?25h[?25l[23;66H4[6;14H[?12l[?25h[?25l[23;66H5[6;15H[?12l[?25h[?25l[23;66H6[6;16H[?12l[?25h[?25l[23;66H7[6;17H[?12l[?25h[?25l[23;66H [6;1H[?12l[?25h[?25l[23;1H[1m-- INSERT --[m[23;13H[K[23;63H6,1[11CAll[6;1H[?12l[?25h[?25l[23;65H2[6;2H[?12l[?25h[?25l[23;65H3[6;3H[?12l[?25h[?25l[23;65H4[6;4H[?12l[?25h[?25l[23;65H5[6;5H[?12l[?25h[?25l[23;65H6[6;6H[?12l[?25h[?25l[23;65H7[6;7H[?12l[?25h[?25l[23;65H8[6;8H[?12l[?25h[?25l[23;65H9[6;9H[?12l[?25h[?25l[23;65H10[6;10H[?12l[?25h[?25l[23;66H1[6;11H[?12l[?25h[?25l[23;66H2[6;12H[?12l[?25h[?25l[23;66H3[6;13H[?12l[?25h[?25l[23;66H4[6;14H[?12l[?25h[?25l[23;66H5[6;15H[?12l[?25h[?25l[23;66H6[6;16H[?12l[?25h[?25l[23;66H7[6;17H[?12l[?25h[?25l030[23;66H8[6;18H[?12l[?25h[?25l030[23;66H9[6;19H[?12l[?25h[?25l:30[23;65H20[6;20H[?12l[?25h[?25l030[23;66H1[6;21H[?12l[?25h[?25l030[23;66H2[6;22H[?12l[?25h[?25l:30[23;66H3[6;23H[?12l[?25h[23;1H[K[6;22H[?25l[23;63H6,22[10CAll[6;22H[?12l[?25h[?25l[23;63H[K[23;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"/etc/systemd/system/watchlog.timer" 11L, 187C written
-[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# vi /etc/systemd/system/watchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timer[1Pwatchlog.timerswatchlog.timerywatchlog.timerswatchlog.timerswatchlog.timer[1Pwatchlog.timertwatchlog.timerewatchlog.timermwatchlog.timercwatchlog.timertwatchlog.timerlwatchlog.timer watchlog.timerewatchlog.timernwatchlog.timerawatchlog.timerbwatchlog.timerlwatchlog.timerewatchlog.timer watchlog.timer
-Created symlink from /etc/systemd/system/multi-user.target.wants/watchlog.timer to /etc/systemd/system/watchlog.timer.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl enable watchlog.timer[1P watchlog.timer[1P watchlog.timer[1P watchlog.timer[1P watchlog.timer[1P watchlog.timer[1P watchlog.timers watchlog.timert watchlog.timera watchlog.timert watchlog.timeru watchlog.timers watchlog.timer
-[1;32m●[0m watchlog.timer - Run watchlog script every 30 second
-   Loaded: [1;31merror[0m (Reason: Invalid argument)
-   Active: [1;32mactive (elapsed)[0m since Пн 2023-12-25 09:03:33 UTC; 36min ago
-
-дек 25 09:03:33 centos7.localdomain systemd[1]: Started Run watchlog scrip...
-дек 25 09:39:14 centos7.localdomain systemd[1]: [1;31m[/etc/systemd/system/watch...[0m
-дек 25 09:39:14 centos7.localdomain systemd[1]: [1;31mwatchlog.timer lacks value...[0m
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.timerenable[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi /etc/systemd/system/watchlog.timer
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;23r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[23;1H"/etc/systemd/system/watchlog.timer" 11L, 187C[>c[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[34m# Run every 30 second[m
-OnUnitActiveSec=00:00:30
-Unit=watchlog.service
-AccuracySec=1us
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H6,1[11CAll[6;1H[?12l[?25h[27m[m[H[2J[?25l[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[96m# Run every 30 second[m
-OnUnitActiveSec=00:00:30
-Unit=watchlog.service
-AccuracySec=1us
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                               [13;1H~                                                                               [14;1H~                                                                               [15;1H~                                                                               [16;1H~                                                                               [17;1H~                                                                               [18;1H~                                                                               [19;1H~                                                                               [20;1H~                                                                               [21;1H~                                                                               [22;1H~                                                                               [m[23;63H6,1[11CAll"/etc/systemd/system/watchlog.timer" 11L, 187C[6;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[23;65H2[6;2H[?12l[?25h[?25l[23;65H3[6;3H[?12l[?25h[?25l[23;65H4[6;4H[?12l[?25h[?25l[23;65H5[6;5H[?12l[?25h[?25l[23;65H6[6;6H[?12l[?25h[?25l[23;65H7[6;7H[?12l[?25h[?25l[23;65H8[6;8H[?12l[?25h[?25l[23;65H9[6;9H[?12l[?25h[?25l[23;65H10[6;10H[?12l[?25h[?25l[23;66H1[6;11H[?12l[?25h[?25l[23;66H2[6;12H[?12l[?25h[?25l[23;66H3[6;13H[?12l[?25h[?25l[23;66H4[6;14H[?12l[?25h[?25l[23;66H5[6;15H[?12l[?25h[?25l[23;66H6[6;16H[?12l[?25h[?25l[23;66H7[6;17H[?12l[?25h[?25l[23;66H8[6;18H[?12l[?25h[?25l[23;66H9[6;19H[?12l[?25h[?25l[23;65H20[6;20H[?12l[?25h[?25l[23;66H1[6;21H[?12l[?25h[?25l[23;66H2[6;22H[?12l[?25h[?25l[23;66H3[6;23H[?12l[?25h[?25l[23;66H4[6;24H[?12l[?25h[?25l[23;66H3[6;23H[?12l[?25h[?25l[23;66H2[6;22H[?12l[?25h[?25l[23;66H1[6;21H[?12l[?25h[?25l[23;66H0[6;20H[?12l[?25h[?25l[23;65H19[6;19H[?12l[?25h[?25l[23;1H[1m-- INSERT --[m[23;13H[K[23;63H6,19[10CAll[6;19H[?12l[?25h[?25l00:30[6;24H[K[6;19H[?12l[?25h[?25l0:30[6;23H[K[6;19H[?12l[?25h[?25l:30[6;22H[K[6;19H[?12l[?25h[?25l30[6;21H[K[6;19H[?12l[?25h[?25l30[6;20H[K[23;66H8[6;18H[?12l[?25h[?25l30[6;19H[K[23;66H7[6;17H[?12l[?25h[23;1H[K[6;16H[?25l[23;63H6,16[10CAll[6;16H[?12l[?25h[?25l[23;63H[K[23;1H:[?12l[?25hw[?25l[?12l[?25hq[?25l[?12l[?25h[?25l"/etc/systemd/system/watchlog.timer" 11L, 181C written
-[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# vi /etc/systemd/system/watchlog.timer[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Psystemctl status watchlog.timerenable[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl enable watchlog.timer[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi /etc/systemd/system/watchlog.timer[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Psystemctl status watchlog.timer
-[1;32m●[0m watchlog.timer - Run watchlog script every 30 second
-   Loaded: loaded (/etc/systemd/system/watchlog.timer; enabled; vendor preset: disabled)
-   Active: [1;32mactive (elapsed)[0m since Пн 2023-12-25 09:03:33 UTC; 36min ago
-
-дек 25 09:03:33 centos7.localdomain systemd[1]: Started Run watchlog scrip...
-дек 25 09:39:14 centos7.localdomain systemd[1]: [1;31m[/etc/systemd/system/watch...[0m
-дек 25 09:39:14 centos7.localdomain systemd[1]: [1;31mwatchlog.timer lacks value...[0m
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.timer[K[K[K[K[Kservice
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:39:14 UTC; 1min 31s ago
- Main PID: 26456 (code=exited, status=0/SUCCESS)
-
-дек 25 09:39:14 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:39:14 centos7.localdomain watchlog.sh[26456]: ALERT
-дек 25 09:39:14 centos7.localdomain systemd[1]: Started My watchlog service.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.servicee watchlog.servicen watchlog.servicea watchlog.serviceb watchlog.servicel watchlog.servicee watchlog.service
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl enable watchlog.servicestatus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:39:14 UTC; 1min 46s ago
- Main PID: 26456 (code=exited, status=0/SUCCESS)
-
-дек 25 09:39:14 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:39:14 centos7.localdomain watchlog.sh[26456]: ALERT
-дек 25 09:39:14 centos7.localdomain systemd[1]: Started My watchlog service.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.servicea watchlog.servicer watchlog.servicet watchlog.service
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl start watchlog.service[1@tus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:41:28 UTC; 3s ago
-  Process: 26542 ExecStart=/opt/watchlog.sh $WORD $LOG (code=exited, status=0/SUCCESS)
- Main PID: 26542 (code=exited, status=0/SUCCESS)
-
-дек 25 09:41:28 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:41:28 centos7.localdomain watchlog.sh[26542]: ALERT
-дек 25 09:41:28 centos7.localdomain systemd[1]: Started My watchlog service.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.servicer watchlog.servicee watchlog.servicel watchlog.serviceo watchlog.servicea watchlog.serviced watchlog.service
-Failed to reload watchlog.service: Job type reload is not applicable for unit watchlog.service.
-See system logs and 'systemctl status watchlog.service' for details.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl reload watchlog.service[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K daemon-reload
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl daemon-reloadreload watchlog.servicestatus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:41:58 UTC; 4s ago
- Main PID: 26555 (code=exited, status=0/SUCCESS)
-
-дек 25 09:41:58 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:41:58 centos7.localdomain watchlog.sh[26555]: ALERT
-дек 25 09:41:58 centos7.localdomain systemd[1]: Started My watchlog service.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl status watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.service[1P watchlog.servicea watchlog.servicen watchlog.service[1P watchlog.service[1P watchlog.servicee watchlog.servicen watchlog.servicea watchlog.serviceb watchlog.servicel watchlog.servicee watchlog.service
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# systemctl enable watchlog.servicestatus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
-● watchlog.service - My watchlog service
-   Loaded: loaded (/etc/systemd/system/watchlog.service; static; vendor preset: disabled)
-   Active: inactive (dead) since Пн 2023-12-25 09:41:58 UTC; 28s ago
- Main PID: 26555 (code=exited, status=0/SUCCESS)
-
-дек 25 09:41:58 centos7.localdomain systemd[1]: Starting My watchlog servi...
-дек 25 09:41:58 centos7.localdomain watchlog.sh[26555]: ALERT
-дек 25 09:41:58 centos7.localdomain systemd[1]: Started My watchlog service.
-Hint: Some lines were ellipsized, use -l to show in full.
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# tail -f /var/log/messages
-Dec 25 10:02:58 centos7 watchlog.sh: ALERT
-Dec 25 10:02:58 centos7 systemd: Started My watchlog service.
-Dec 25 10:03:28 centos7 systemd: Starting My watchlog service...
-Dec 25 10:03:28 centos7 watchlog.sh: ALERT
-Dec 25 10:03:28 centos7 root: date: I found word, Master!
-Dec 25 10:03:28 centos7 systemd: Started My watchlog service.
-Dec 25 10:03:58 centos7 systemd: Starting My watchlog service...
-Dec 25 10:03:58 centos7 watchlog.sh: ALERT
-Dec 25 10:03:58 centos7 root: date: I found word, Master!
-Dec 25 10:03:58 centos7 systemd: Started My watchlog service.
-Dec 25 10:04:28 centos7 systemd: Starting My watchlog service...
-Dec 25 10:04:28 centos7 watchlog.sh: ALERT
-Dec 25 10:04:28 centos7 root: date: I found word, Master!
-Dec 25 10:04:28 centos7 systemd: Started My watchlog service.
-Dec 25 10:04:58 centos7 systemd: Starting My watchlog service...
-Dec 25 10:04:58 centos7 watchlog.sh: ALERT
-Dec 25 10:04:58 centos7 root: date: I found word, Master!
-Dec 25 10:04:58 centos7 systemd: Started My watchlog service.
-Dec 25 10:05:28 centos7 systemd: Starting My watchlog service...
-Dec 25 10:05:28 centos7 watchlog.sh: ALERT
-Dec 25 10:05:28 centos7 root: date: I found word, Master!
-Dec 25 10:05:28 centos7 systemd: Started My watchlog service.
-Dec 25 10:05:58 centos7 systemd: Starting My watchlog service...
-Dec 25 10:05:58 centos7 watchlog.sh: ALERT
-Dec 25 10:05:58 centos7 root: date: I found word, Master!
-Dec 25 10:05:58 centos7 systemd: Started My watchlog service.
-Dec 25 10:06:28 centos7 systemd: Starting My watchlog service...
-Dec 25 10:06:28 centos7 watchlog.sh: ALERT
-Dec 25 10:06:28 centos7 root: date: I found word, Master!
-Dec 25 10:06:28 centos7 systemd: Started My watchlog service.
-Dec 25 10:06:58 centos7 systemd: Starting My watchlog service...
-Dec 25 10:06:58 centos7 watchlog.sh: ALERT
-Dec 25 10:06:58 centos7 root: date: I found word, Master!
-Dec 25 10:06:58 centos7 systemd: Started My watchlog service.
-Dec 25 10:07:28 centos7 systemd: Starting My watchlog service...
-Dec 25 10:07:28 centos7 watchlog.sh: ALERT
-Dec 25 10:07:28 centos7 root: date: I found word, Master!
-Dec 25 10:07:28 centos7 systemd: Started My watchlog service.
-Dec 25 10:07:58 centos7 systemd: Starting My watchlog service...
-Dec 25 10:07:58 centos7 root: date: I found word, Master!
-Dec 25 10:07:58 centos7 watchlog.sh: ALERT
-Dec 25 10:07:58 centos7 systemd: Started My watchlog service.
-Dec 25 10:08:28 centos7 systemd: Starting My watchlog service...
-Dec 25 10:08:28 centos7 root: date: I found word, Master!
-Dec 25 10:08:28 centos7 watchlog.sh: ALERT
-Dec 25 10:08:28 centos7 systemd: Started My watchlog service.
-Dec 25 10:08:58 centos7 systemd: Starting My watchlog service...
-Dec 25 10:08:58 centos7 root: date: I found word, Master!
-Dec 25 10:08:58 centos7 watchlog.sh: ALERT
-Dec 25 10:08:58 centos7 systemd: Started My watchlog service.
-Dec 25 10:09:28 centos7 systemd: Starting My watchlog service...
-Dec 25 10:09:28 centos7 watchlog.sh: ALERT
-Dec 25 10:09:28 centos7 root: date: I found word, Master!
-Dec 25 10:09:28 centos7 systemd: Started My watchlog service.
-^C
-]0;root@centos7:/home/vagrant[root@centos7 vagrant]# tail -f /var/log/messagessystemctl status watchlog.serviceenable[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[10Pdaemon-reloadreload watchlog.servicestatus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1Prt[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@tus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cenable[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[2Ptimerenable[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi /etc/systemd/system/watchlog.timer[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[6Psystemctl status watchlog.timer[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi /etc/systemd/system/watchlog.timer[K[K[K[K[Kservice
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;38r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[38;1H"/etc/systemd/system/watchlog.service" 8L, 162C[>c[1;1H[Unit]
-Description=My watchlog service
-Wants=watchlog.timer
-
-[Service]
-Type=oneshot
-EnvironmentFile=/etc/sysconfig/watchlog
-ExecStart=/opt/watchlog.sh $WORD $LOG
-[94m~                                                                                                                                             [10;1H~                                                                                                                                             [11;1H~                                                                                                                                             [12;1H~                                                                                                                                             [13;1H~                                                                                                                                             [14;1H~                                                                                                                                             [15;1H~                                                                                                                                             [16;1H~                                                                                                                                             [17;1H~                                                                                                                                             [18;1H~                                                                                                                                             [19;1H~                                                                                                                                             [20;1H~                                                                                                                                             [21;1H~                                                                                                                                             [22;1H~                                                                                                                                             [23;1H~                                                                                                                                             [24;1H~                                                                                                                                             [25;1H~                                                                                                                                             [26;1H~                                                                                                                                             [27;1H~                                                                                                                                             [28;1H~                                                                                                                                             [29;1H~                                                                                                                                             [30;1H~                                                                                                                                             [31;1H~                                                                                                                                             [32;1H~                                                                                                                                             [33;1H~                                                                                                                                             [34;1H~                                                                                                                                             [35;1H~                                                                                                                                             [36;1H~                                                                                                                                             [37;1H~                                                                                                                                             [m[38;125H4,0-1[9CAll[4;1H[?12l[?25h[27m[m[H[2J[?25l[1;1H[Unit]
-Description=My watchlog service
-Wants=watchlog.timer
-
-[Service]
-Type=oneshot
-EnvironmentFile=/etc/sysconfig/watchlog
-ExecStart=/opt/watchlog.sh $WORD $LOG
-[94m~                                                                                                                                             [10;1H~                                                                                                                                             [11;1H~                                                                                                                                             [12;1H~                                                                                                                                             [13;1H~                                                                                                                                             [14;1H~                                                                                                                                             [15;1H~                                                                                                                                             [16;1H~                                                                                                                                             [17;1H~                                                                                                                                             [18;1H~                                                                                                                                             [19;1H~                                                                                                                                             [20;1H~                                                                                                                                             [21;1H~                                                                                                                                             [22;1H~                                                                                                                                             [23;1H~                                                                                                                                             [24;1H~                                                                                                                                             [25;1H~                                                                                                                                             [26;1H~                                                                                                                                             [27;1H~                                                                                                                                             [28;1H~                                                                                                                                             [29;1H~                                                                                                                                             [30;1H~                                                                                                                                             [31;1H~                                                                                                                                             [32;1H~                                                                                                                                             [33;1H~                                                                                                                                             [34;1H~                                                                                                                                             [35;1H~                                                                                                                                             [36;1H~                                                                                                                                             [37;1H~                                                                                                                                             [m[38;125H4,0-1[9CAll"/etc/systemd/system/watchlog.service" 8L, 162C[4;1HP+q436f\P+q6b75\P+q6b64\P+q6b72\P+q6b6c\P+q2332\P+q2334\P+q2569\P+q2a37\P+q6b31\[?12l[?25h[?25l[38;1HType  :quit<Enter>  to exit Vim[38;32H[K[38;125H4,0-1[9CAll[4;1H[?12l[?25h[?25l[38;1H[K[38;1H:[?12l[?25hq[?25l[?12l[?25h![?25l[?12l[?25h[?25l[38;1H[K[38;1H[?1l>[?12l[?25h[?1049l]0;root@centos7:/home/vagrant[root@centos7 vagrant]# vi /etc/systemd/system/watchlog.service[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Ptail -f /var/log/messagesvi /etc/systemd/system/watchlog.service[K[K[K[K[K[K[Ktimer
-[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H]11;?[1;38r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[38;1H"/etc/systemd/system/watchlog.timer" 11L, 181C[>c[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[34m# Run every 30 second[m
-OnUnitActiveSec=30
-Unit=watchlog.service
-AccuracySec=1us
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                                                                                             [13;1H~                                                                                                                                             [14;1H~                                                                                                                                             [15;1H~                                                                                                                                             [16;1H~                                                                                                                                             [17;1H~                                                                                                                                             [18;1H~                                                                                                                                             [19;1H~                                                                                                                                             [20;1H~                                                                                                                                             [21;1H~                                                                                                                                             [22;1H~                                                                                                                                             [23;1H~                                                                                                                                             [24;1H~                                                                                                                                             [25;1H~                                                                                                                                             [26;1H~                                                                                                                                             [27;1H~                                                                                                                                             [28;1H~                                                                                                                                             [29;1H~                                                                                                                                             [30;1H~                                                                                                                                             [31;1H~                                                                                                                                             [32;1H~                                                                                                                                             [33;1H~                                                                                                                                             [34;1H~                                                                                                                                             [35;1H~                                                                                                                                             [36;1H~                                                                                                                                             [37;1H~                                                                                                                                             [m[38;125H6,1[11CAll[6;1H[?12l[?25h[27m[m[H[2J[?25l[1;1H[Unit]
-Description=Run watchlog script every 30 second
-
-[Timer]
-[96m# Run every 30 second[m
-OnUnitActiveSec=30
-Unit=watchlog.service
-AccuracySec=1us
-
-[Install]
-WantedBy=multi-user.target
-[94m~                                                                                                                                             [13;1H~                                                                                                                                             [14;1H~                                                                                                                                             [15;1H~                                                                                                                                             [16;1H~                                                                                                                                             [17;1H~                                                                                                                                             [18;1H~                                                                                                                                             [19;1H~                                                                                                                                             [20;1H~                                                                                                                                             [21;1H~                                                                                                                                             [22;1H~                                                                                                                                             [23;1H~                                                                                                                                             [24;1H~                                                                                                                                             [25;1H~                                                                                                                                             [26;1H~                                                                                                                                             [27;1H~                                                                                                                                             [28;1H~                                                                                                                                             [29;1H~                                                                                                                                             [30;1H~   
